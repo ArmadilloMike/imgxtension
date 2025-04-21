@@ -1,0 +1,44 @@
+{
+  "name": "imgxtension",
+  "description": "Extension for modifying the imgflip website for a better user experience.",
+  "version": "2.0.0",
+  "manifest_version": 3,
+  "permissions": ["activeTab", "scripting","storage"],
+  "action": {
+    "default_popup": "popup/index.html",
+    "default_icon": "imgicon.png"
+  },
+  "background": {
+    "service_worker": "scripts/background.js"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["scripts/break_ads.js", 
+              "scripts/update-theme.js", 
+              "scripts/flip-buttons.js",
+              "scripts/top-posts.js",
+              "scripts/hide-blocked.js",
+              "scripts/show-icons.js",
+              "scripts/msmg-link.js",
+              
+              "settings/options.js"
+            ],
+      "run_at": "document_idle"
+    }
+  ],
+
+  "web_accessible_resources": [
+  {
+    "resources": ["themes.css",
+                  "scripts/flip-buttons.css",
+                  "scripts/top-posts.css",
+                  "settings/options.css",
+                  "images/*"],
+    "matches": ["*://*.imgflip.com/*"]
+  }
+],
+"options_page": "settings/options.html"
+
+}

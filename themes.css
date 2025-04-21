@@ -1,0 +1,125 @@
+:root {
+    --maincolor: #1f1b21;
+    --subcolor: #29242c;
+    --border-color: #49404f;
+    --fontcolor: #dfd5e5;
+
+    --border-thicc: 1px;
+    --border-curve: 3px;
+
+    --impcolor-blu: #32a0e9;
+    --impcolor-red: #e94732;
+
+    --customco-1: #47d2ab;
+    --customco-2: #ff005c;
+    --customco-3: #32a0e9;
+}
+
+*:not(.check-red, img) {
+    border-color: var(--border-color) !important;
+    border-width: var(--border-thicc) !important;
+}
+
+body, body.darkmode, .user-stat, .user-stats, .home-create-btns, .base-options, .check-red, .com, .c-new-btn-wrap, .stream-description, #base-panel, #page, #img-coms, #img-main, #img-primary, #img-secondary, #c-area, #c-new-main, #img-coms-header, #home-page {
+    background: var(--maincolor) !important;
+    color: var(--fontcolor) !important;
+}
+
+
+textarea, button:not(.check-red, .ico-color-btn), .ibox, .clearfix, .login-box, .c-right, .i-select-dropdown, .user-com, .shr-popup, .BOX, .menu, .pager-next-l-but, .home-img, .recaption.l.but, #chat-main, #chat-list, #user-tagline, #base-left, #panel-back, #footer {
+    background: var(--subcolor) !important;
+    color: var(--fontcolor) !important;
+}
+
+a {
+    background: var(--subcolor) !important;
+    color: var(--impcolor-blu);
+}
+
+.check-red {
+    color: var(--impcolor-red) !important;
+}
+
+.img-flag-top, .img-flag-bottom {
+    background: var(--border-color) !important;
+}
+
+.lr.but.sml {
+    color: var(--impcolor-red) !important;
+    border: var(--border-thicc) solid var(--impcolor-red) !important;
+}
+
+.user-unfollow-btn.lb.but.sml, .more-toggle.lb.but.sml, .lb.but.sml.user-see-all-btn, .user-edit-btn.lb.but.sml {
+    color: var(--impcolor-blu) !important;
+    border: var(--border-thicc) solid var(--impcolor-blu) !important;
+    background: var(--subcolor) !important;
+}
+.user-follow-btn.b.but.sml {
+    background: var(--impcolor-blu) !important;
+    color: var(--fontcolor) !important;
+    border: var(--border-thicc) solid var(--impcolor-blue) !important;
+}
+
+.u-username {
+    color: var(--fontcolor) !important;
+}
+.c-img-owner {
+    color: var(--impcolor-blu) !important;
+}
+.c-mod-stream {
+    color: var(--impcolor-blu) !important;  
+}
+
+
+#u-msgs-btn.has-unread svg {
+    stroke: var(--impcolor-blu) !important;
+}
+#nt-count.has-nots {
+    color: var(--impcolor-blu) !important;
+    border-color: var(--impcolor-blu) !important;
+}
+
+.mask-back {
+    background: #000;
+}
+
+.-up.set:after {
+    border-bottom-color: var(--impcolor-blu);
+}
+.-up.set:before {
+    background: var(--impcolor-blu);
+}
+.-down.set:after {
+    border-top-color: var(--impcolor-red);
+}
+.-down.set:before {
+    background: var(--impcolor-red);
+}
+
+.ico-color-1 {
+    background: var(--customco-1) !important;
+}
+.ico-color-2 {
+    background: var(--customco-2) !important;
+}
+.ico-pixel.ico-color-3 {
+    background: var(--customco-3) !important;
+}
+
+#flip-box {
+    background: var(--subcolor) !important;
+}
+.base-latest.on{
+    background: var(--customco-3) !important;
+}
+.base-hot.on{
+    background: var(--customco-2) !important;
+}.base-latest:hover{
+    background: var(--customco-3) !important;
+}
+.base-hot:hover{
+    background: var(--customco-2) !important;
+}
+.base-top:hover{
+    background: var(--customco-1) !important;
+}
