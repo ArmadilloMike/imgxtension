@@ -1,7 +1,7 @@
 chrome.storage.local.get(['msmgLink'], result => {
     const setting = result.msmgLink ?? false; 
 
-    if (setting == true) {
+    if (typeof window !== "undefined" && window.location.href.includes("imgflip.com") && setting == true) {
         // create html
         let html = '<a class="nav" href="/m/MS_memer_group">';
                 html += '<img id="logo" alt="Imgflip Logo" src="'+ chrome.runtime.getURL("images/msmg-pc.svg") +'">';
