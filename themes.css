@@ -36,6 +36,12 @@ a {
     color: var(--impcolor-blu);
 }
 
+.img-tag {
+    background: var(--fontcolor) !important;
+    color: var(--maincolor) !important;
+    border: 1px solid var(--border-color);
+}
+
 .check-red {
     color: var(--impcolor-red) !important;
 }
