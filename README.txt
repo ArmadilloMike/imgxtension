@@ -1,4 +1,4 @@
-I have only so far tested this on Brave and Chrome, it should run on most Chromium based browsers. First, once the file is unzipped, go to 
+I have only so far tested this on Brave and Chrome, it should run on most Chromium based browsers. First, download the project into one folder, then go to 
 chrome://extensions/
 
 Next, there should somewhere be a switch on the screen that says “Developer Mode”. Make sure that is checked to the ON position.
