@@ -1,0 +1,21 @@
+.base-top {
+    color: #fff;
+    padding: 0 10px;
+    border-left: none;
+    border-radius: 0 3px 3px 0;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    height: 28px;
+    line-height: 28px;
+    border: 1px solid #ccc;
+}
+
+.base-top:hover {
+    background: #3af300;
+    text-decoration: none;
+}
+
+.base-latest {
+    border-right: none !important;
+}

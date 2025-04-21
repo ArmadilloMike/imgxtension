@@ -1,0 +1,112 @@
+:root {
+    --maincolor: #1f1b21;
+    --subcolor: #29242c;
+    --border-color: #49404f;
+    --fontcolor: #dfd5e5;
+
+    --border-thicc: 1px;
+    --border-curve: 3px;
+
+    --impcolor-blu: #32a0e9;
+    --impcolor-red: #e94732;
+}
+
+
+*{
+    color: var(--fontcolor);
+}
+
+body {
+    margin: 0px;
+    background: var(--maincolor);
+}
+
+#mainbox {
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+    height: 1000px;
+}
+
+.setting-body {
+    background: var(--subcolor);
+    border: 2px solid var(--border-color);
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.setting-topbar {
+    height: 52px;
+    padding-inline-end: 10px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.setting-drop {
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    border-radius: 4px;
+    transition: 0.2s ease;
+    user-select: none;
+    background: var(--subcolor);
+}
+.setting-drop:hover {
+    filter: brightness(1.4);
+}
+.reverted {
+    transform: scaleY(-1);
+}
+
+.setting-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.setting-topspacer {
+    margin-inline-start: auto;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.switch {
+    display: block;
+    position: relative;
+    width: 40px;
+    height: 20px;
+    background: var(--maincolor);
+    border-radius: 10px;
+    border-color: var(--border-color);
+    border: 1px solid var(--border-color);
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 2px;
+
+}
+.switch[state="on"] {
+    background: var(--impcolor-blu);
+    border-color: var(--impcolor-blu);
+}
+.switch::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: var(--fontcolor);
+    border-radius: 5px;
+    top: 4px;
+    left: 4px;
+    transition: all 0.25s ease;
+}
+.switch[state="on"]::before {
+    left: 24px;
+}
+
+
+.setting-desc {
+    padding: 10px;
+    font-size: 15px;
+}

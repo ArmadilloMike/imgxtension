@@ -1,0 +1,19 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #111;
+}
+h1 {
+    color: #ccc;
+    text-align: center;
+}
+button {
+    background: #333;
+    color: #ccc;
+    border: 2px solid #666;
+    padding: 2px;
+    text-align: center;
+    margin: auto;
+}
