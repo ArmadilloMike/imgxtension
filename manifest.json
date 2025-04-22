@@ -22,6 +22,7 @@
               "scripts/hide-blocked.js",
               "scripts/show-icons.js",
               "scripts/msmg-link.js",
+              "scripts/show-mod.js",
               
               "settings/options.js"
             ],
