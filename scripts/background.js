@@ -14,6 +14,7 @@ function fetchNotifications(sessionCookie) {
       //fixme
       chrome.action.setBadgeText({ text: notificationCount });
       chrome.action.setBadgeBackgroundColor({ color: "#D72E62" })
+      console.log(`set notif count to ${notificationCount}`)
     })
     .catch(err => {
       console.error("Error fetching notifications:", err);
@@ -32,5 +33,11 @@ const intervalInMinutes = .33;
 const intervalInMilliseconds = intervalInMinutes * 60 * 1000;
 
 setInterval(() => {
-  fetchNotifications(sessionCookie)
+  chrome.cookies.get({ url: "https://imgflip.com", name: "iflipsess" }, function(cookie) {
+    if (cookie) {
+      fetchNotifications(cookie.value);
+    } else {
+      console.log("You must be logged in to get notifs");
+    }
+  });
 }, intervalInMilliseconds);
