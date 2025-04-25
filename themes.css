@@ -94,6 +94,16 @@ textarea, button:not(.check-red, .ico-color-btn, .c-reply, .c-flag, .c-delete, .
     background: #000;
 }
 
+.c-linked .c-right {
+    border-color: var(--impcolor-blu) !important;
+    color: var(--impcolor-blu) !important;
+}
+
+.img-author .u-username {
+    border-color: var(--impcolor-blu) !important;
+    color: var(--impcolor-blu) !important;
+}
+
 .-up.set:after {
     border-bottom-color: var(--impcolor-blu);
 }
