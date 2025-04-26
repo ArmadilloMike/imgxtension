@@ -4,16 +4,110 @@
 
 body {
     background-color: #111;
+    min-width: 400px;
 }
 h1 {
     color: #ccc;
     text-align: center;
+    border: 1px solid #666;
+    padding: 10px;
+    background: #333;   
 }
 button {
+    display: flex;
     background: #333;
     color: #ccc;
     border: 2px solid #666;
-    padding: 2px;
+    padding: 3px;
     text-align: center;
     margin: auto;
+    margin-bottom: 10px;
+}
+
+button:hover {
+    border-color: #ccc;
+}
+
+.user-login {
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+    background: #333;
+    display: flex;
+    margin: auto;
+    color: #ccc;
+    border: 1px solid #666;
+}
+
+
+.user-title {
+    margin-top: 3px;
+    display: flex;
+    background: #333;
+    color: #ccc;
+    font-size: 18px;    
+    border: 2px solid #666;
+    padding: 10px;
+    text-align: center;
+}
+
+.user-title-text {
+    margin: 0px;
+    margin-left: 3px;
+}
+.user-title-text:hover {
+    cursor: pointer;
+}
+
+
+.ico-custom {
+    display: inline-block;
+    vertical-align: top;
+    width: 20px;
+    height: 20px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.ico-pixel {
+    float: left;
+    width: 20%;
+    height: 20%;
+}
+.ico-color-0 {
+    background: none;
+}
+.ico-color-1 {
+    background: #ccc;
+}
+.ico-color-2 {
+    background: #f70;
+}
+.ico-color-3 {
+    background: #00bff3;
+}
+.ico-color-4 {
+    background: #4b4;
+}
+.ico-color-5 {
+    background: #96f;
+}
+
+
+.user-title-spacer {
+    width: 35%;
+}
+
+.user-title-msgs {
+    stroke: #ccc;
+    float: right;
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke-width: 10;
+    stroke-linejoin: round;
+    padding: 5px;
+}
+.user-title-msgs:hover {
+    cursor: pointer;
 }
