@@ -1,3 +1,5 @@
+/*  eventually this will not contain the :root defaults, and they will be moved to multiple different files for a selectable website themes setting */
+
 :root {
     --maincolor: #1f1b21;
     --subcolor: #29242c;
