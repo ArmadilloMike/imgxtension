@@ -27,12 +27,12 @@ body, body.darkmode, .user-stat, .user-stats, .home-create-btns, .base-options, 
 }
 
 
-textarea, button:not(.check-red, .ico-color-btn, .c-reply, .c-flag, .c-delete, .c-img-link), .nt-not, .ibox, .clearfix, .login-box, .c-right, .i-select-dropdown, .user-com, .shr-popup, .BOX, .menu, .pager-next-l-but, .home-img, .recaption.l.but, #chat-main, #chat-list, #user-tagline, #base-left, #panel-back, #footer {
+textarea, button:not(.check-red, .ico-color-btn, .c-reply, #done, .c-flag, .c-delete, .c-img-link), .nt-not, .ibox, .clearfix, .login-box, .c-right, .i-select-dropdown, .user-com, .shr-popup, .BOX, .menu, .pager-next-l-but, .home-img, .recaption.l.but, #chat-main, #chat-list, #user-tagline, #base-left, #panel-back, #footer {
     background: var(--subcolor) !important;
     color: var(--fontcolor) !important;
 }
 
-.nt-new, .chat.unread {
+.nt-new, .chat.unread, .mm-search-result-text:hover {
     background: var(--maincolor) !important;
 }
 
