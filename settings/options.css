@@ -1,36 +1,36 @@
 :root {
-    --maincolor: #1f1b21;
-    --subcolor: #29242c;
-    --border-color: #49404f;
-    --fontcolor: #dfd5e5;
+    --maincolor-o: #1f1b21;
+    --subcolor-o: #29242c;
+    --border-color-o: #49404f;
+    --fontcolor-o: #dfd5e5;
 
-    --border-thicc: 1px;
+    --border-thicc-o: 1px;
     --border-curve: 3px;
 
-    --impcolor-blu: #32a0e9;
-    --impcolor-red: #e94732;
+    --impcolor-blu-o: #32a0e9;
+    --impcolor-red-o: #e94732;
 }
 
 
 *{
-    color: var(--fontcolor);
+    color: var(--fontcolor-o);
 }
 
 body {
     margin: 0px;
-    background: var(--maincolor);
+    background: var(--maincolor-o);
 }
 
 #mainbox {
     width: 90%;
     max-width: 800px;
     margin: auto;
-    height: 1000px;
+    padding: 10px;
 }
 
 .setting-body {
-    background: var(--subcolor);
-    border: 2px solid var(--border-color);
+    background: var(--subcolor-o);
+    border: 2px solid var(--border-color-o);
     border-radius: 5px;
     margin-top: 10px;
 }
@@ -50,7 +50,7 @@ body {
     border-radius: 4px;
     transition: 0.2s ease;
     user-select: none;
-    background: var(--subcolor);
+    background: var(--subcolor-o);
 }
 .setting-drop:hover {
     filter: brightness(1.4);
@@ -76,18 +76,18 @@ body {
     position: relative;
     width: 40px;
     height: 20px;
-    background: var(--maincolor);
+    background: var(--maincolor-o);
     border-radius: 10px;
-    border-color: var(--border-color);
-    border: 1px solid var(--border-color);
+    border-color: var(--border-color-o);
+    border: 1px solid var(--border-color-o);
     box-sizing: border-box;
     cursor: pointer;
     margin: 2px;
 
 }
 .switch[state="on"] {
-    background: var(--impcolor-blu);
-    border-color: var(--impcolor-blu);
+    background: var(--impcolor-blu-o);
+    border-color: var(--impcolor-blu-o);
 }
 .switch::before {
     content: "";
@@ -95,7 +95,7 @@ body {
     display: block;
     width: 10px;
     height: 10px;
-    background: var(--fontcolor);
+    background: var(--fontcolor-o);
     border-radius: 5px;
     top: 4px;
     left: 4px;
@@ -109,4 +109,55 @@ body {
 .setting-desc {
     padding: 10px;
     font-size: 15px;
+}
+
+
+.btn-container {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: left;
+    width: 100%;
+    background: none;
+    border: none;
+}
+.theme-btn{
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--subcolor-o);
+}
+.theme-btn:hover {
+    cursor: pointer;
+}
+.preview-container {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: left;
+    text-align: left;
+    width: 100%;
+    background: none;
+    border: none;
+    margin-top: 5px;
+}
+.preview-spacer {
+    width: 10px;
+    height: 10px;
+
+}
+.preview-box {
+    width: 10px;
+    height: 10px;
+    border: 1px solid var(--border-color-o);
+
+}
+.preview-shift {
+    background: red;
+    width: 10px;
+    height: 10px;
+    border: 1px solid var(--border-color-o);
+}
+
+img {
+    width: 100%;
 }
