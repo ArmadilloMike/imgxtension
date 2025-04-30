@@ -1,0 +1,17 @@
+:root {
+    --titleshift: 50deg; /* determines the logo color shift */
+    --maincolor: #2c3b3a;
+    --subcolor: #648b89;
+    --border-color: #9cdbd9;
+    --fontcolor: #f7f7f7;
+
+    --border-thicc: 1px;
+    --border-curve: 3px;
+
+    --impcolor-blu: #53f7f1;
+    --impcolor-red: #5382f7;
+
+    --customco-1: #f7f7f7;
+    --customco-2: #ff005c;
+    --customco-3: #e95732;
+}

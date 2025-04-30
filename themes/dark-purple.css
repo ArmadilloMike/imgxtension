@@ -1,0 +1,17 @@
+:root {
+    --titleshift: 270deg;
+    --maincolor: #161418;
+    --subcolor: #1c191e;
+    --border-color: #3a323e;
+    --fontcolor: #c7b0d5;
+
+    --border-thicc: 1px;
+    --border-curve: 3px;
+
+    --impcolor-blu: #9732e9;
+    --impcolor-red: #ab2792;
+
+    --customco-1: #2e858b;
+    --customco-2: rgb(206, 3, 77);
+    --customco-3: #6c32e9;
+}
