@@ -3,7 +3,19 @@
   "description": "Extension for modifying the imgflip website for a better user experience.",
   "version": "2.0.0",
   "manifest_version": 3,
-  "permissions": ["activeTab", "scripting","storage"],
+  "permissions": [
+    "cookies", 
+    "alarms", 
+    "notifications", 
+    "activeTab", 
+    "scripting", 
+    "storage"
+  ],
+  "host_permissions": [
+    "http://*.imgflip.com/*", 
+    "https://*.imgflip.com/*"
+  ],
+
   "action": {
     "default_popup": "popup/index.html",
     "default_icon": "imgicon.png"
@@ -23,6 +35,7 @@
               "scripts/show-icons.js",
               "scripts/msmg-link.js",
               "scripts/show-mod.js",
+              "scripts/notifContent.js",
               
               "settings/options.js"
             ],
@@ -36,6 +49,12 @@
                   "scripts/flip-buttons.css",
                   "scripts/top-posts.css",
                   "settings/options.css",
+
+                  "themes/default.css",
+                  "themes/msmg-purple.css",
+                  "themes/dark-purple.css",
+                  "themes/orange.css",
+
                   "images/*"],
     "matches": ["*://*.imgflip.com/*"]
   }

@@ -59,6 +59,32 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
+    // Add click event to all theme btns
+    document.querySelectorAll('.theme-btn').forEach(switchEl => {
+      switchEl.addEventListener('click', () => {
+        const key = switchEl.dataset.theme;
+        // Save to storage
+        chrome.storage.local.set({ theme: key }, () => {
+          console.log(`Setting "theme" set to ${key}`);
+        });
+
+      // Loop through all theme buttons
+        document.querySelectorAll('.theme-btn').forEach(btn => {
+          btn.style.borderColor = "var(--subcolor-o)";  // Reset others
+        });
+        switchEl.style.borderColor = "var(--impcolor-blu-o)";
+        setThemePreview(key);
+      });
+    });
+
+    //initial highlight
+    chrome.storage.local.get(['theme'], result => {
+      const theme = result.theme ?? 0;
+      const highlight = document.querySelector(`[data-theme="${theme}"]`);
+      highlight.style.borderColor = 'var(--impcolor-blu-o)';
+
+      setThemePreview(theme);
+    });
 
 
     // Add click event to all dropdowns
@@ -86,4 +112,43 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   
+  function setThemePreview(theme) {
+    const themes = ["default",
+      "msmg-purple",
+      "dark-purple",
+      "orange",
+      ];
+    const vars = ["--maincolor",
+      "--subcolor",
+      "--border-color",
+      "--fontcolor",
+
+      "--impcolor-blu",
+      "--impcolor-red",
+
+      "--customco-1",
+      "--customco-2",
+      "--customco-3"
+      ];
+    // Dynamically inject the CSS
+    cssUrl = chrome.runtime.getURL(`../themes/${themes[theme]}.css`);
+    link = document.createElement("link");
+    link.href = cssUrl;
+    link.type = "text/css";
+    link.rel = "stylesheet";
+    document.head.appendChild(link);
+    link.addEventListener('load', () => {
+      const style = window.getComputedStyle(document.body);
+
+      const shiftBtn = document.querySelector(".preview-shift");
+      const titleshift = style.getPropertyValue('--titleshift');
+      const shift = titleshift ? titleshift.trim() : '0deg';
+      shiftBtn.style.filter = `hue-rotate(${shift})`;
+
+      document.querySelectorAll(".preview-box").forEach(preview => {
+        const color = style.getPropertyValue(vars[preview.dataset.preview]);
+        preview.style.background = color;
+      });
+    });
+  }
   

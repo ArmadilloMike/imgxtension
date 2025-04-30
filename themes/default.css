@@ -1,0 +1,18 @@
+:root {
+    --titleshift: 0deg; /* determines the logo color shift */
+    --maincolor: #111; /* bg color */
+    --subcolor: #333; /* content color */
+    --border-color: #666; /* color of element borders */
+    --fontcolor: #ccc; /* the color of... FONTS. big surprise. */
+
+    --border-thicc: 1px; /* determines border thiccness */
+    --border-curve: 3px; /* determines how much border corners curve */
+
+    --impcolor-blu: #00bff3; /* important color things that are blue by default (like unfollow button) */
+    --impcolor-red: #f44; /* important color things that are red by default (like delete post button) */
+
+    --customco-1: #ccc; /* white custom icon color */
+    --customco-2: #f70; /* orange custom icon color */
+    --customco-3: #00bff3; /* blue custom icon color */
+}
+
