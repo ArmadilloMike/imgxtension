@@ -1,25 +1,24 @@
-/*  eventually this will not contain the :root defaults, and they will be moved to multiple different files for a selectable website themes setting */
-
 :root {
-    --maincolor: #1f1b21;
-    --subcolor: #29242c;
-    --border-color: #49404f;
-    --fontcolor: #dfd5e5;
+    --maincolor: #111;
+    --subcolor: #666;
+    --border-color: #999;
+    --fontcolor: #ccc;
 
     --border-thicc: 1px;
     --border-curve: 3px;
 
-    --impcolor-blu: #32a0e9;
-    --impcolor-red: #e94732;
+    --impcolor-blu: #00bff3;
+    --impcolor-red: #f44;
 
-    --customco-1: #47d2ab;
-    --customco-2: #ff005c;
-    --customco-3: #32a0e9;
+    --customco-1: #ccc;
+    --customco-2: #f70;
+    --customco-3: #00bff3;
 }
 
-*:not(.check-red, img) {
+*:not(.check-red, img, .has-unread) {
     border-color: var(--border-color) !important;
     border-width: var(--border-thicc) !important;
+    /*stroke: var(--border-color);*/
 }
 
 
@@ -29,7 +28,7 @@ body, body.darkmode, .user-stat, .user-stats, .home-create-btns, .base-options, 
 }
 
 
-textarea, button:not(.check-red, .ico-color-btn, .c-reply, #done, .c-flag, .c-delete, .c-img-link), .nt-not, .ibox, .clearfix, .login-box, .c-right, .i-select-dropdown, .user-com, .shr-popup, .BOX, .menu, .pager-next-l-but, .home-img, .recaption.l.but, #chat-main, #chat-list, #user-tagline, #base-left, #panel-back, #footer {
+textarea, button:not(.check-red, .ico-color-btn, .c-reply, .c-flag, .c-delete, .c-img-link), #done, .nt-not, .ibox, .clearfix, .login-box, .c-right, .i-select-dropdown, .user-com, .shr-popup, .BOX, .menu, .pager-next-l-but, .home-img, .recaption.l.but, #chat-main, #chat-list, #user-tagline, #base-left, #panel-back, #footer {
     background: var(--subcolor) !important;
     color: var(--fontcolor) !important;
 }
@@ -44,7 +43,7 @@ textarea, button:not(.check-red, .ico-color-btn, .c-reply, #done, .c-flag, .c-de
     border: 1px solid var(--border-color);
 }
 
-.c-img-link, .a {
+.c-img-link, .a/*, a:not(#u-menu a):not(.nt-not *):not(.nt-not):not(.has-unread)*/ {
     background: var(--subcolor) !important;
     color: var(--impcolor-blu) !important;
 }
@@ -148,4 +147,9 @@ textarea, button:not(.check-red, .ico-color-btn, .c-reply, #done, .c-flag, .c-de
 }
 .base-top:hover{
     background: var(--customco-1) !important;
+}
+
+
+#footer-nav a {
+    color: var(--border-color) !important;
 }
