@@ -1,3 +1,68 @@
+/* ADDS IMGFLIP QUICK CREATE */
+let contextMenuListenerAdded = false;
+function createMenus() {
+  chrome.contextMenus.removeAll(() => {
+    chrome.contextMenus.create({
+      id: 'imgflip-image',
+      title: 'Create meme from this image',
+      contexts: ['image']
+    });
+    chrome.contextMenus.create({
+      id: 'imgflip-video',
+      title: 'Create GIF from this video',
+      contexts: ['video']
+    });
+  });
+  if (!contextMenuListenerAdded) {
+    chrome.contextMenus.onClicked.addListener((info, tab) => {
+      if (info.menuItemId === 'imgflip-image') {
+        const url = 'https://imgflip.com/memegenerator#imgUrl=' + encodeURIComponent(info.srcUrl);
+        chrome.tabs.create({ url });
+      } else if (info.menuItemId === 'imgflip-video') {
+        const url = 'https://imgflip.com/gif-maker#videoUrl=' + encodeURIComponent(info.srcUrl);
+        chrome.tabs.create({ url });
+      }
+    });
+    contextMenuListenerAdded = true;
+  }
+}
+
+function removeMenus() {
+  chrome.contextMenus.removeAll();
+}
+
+// handle setting changes
+chrome.storage.onChanged.addListener((changes, area) => {
+  if (area === 'local' && changes.quickCreate) {
+    if (changes.quickCreate.newValue === true) {
+      createMenus();
+    } else {
+      removeMenus();
+    }
+  }
+});
+// handle startup
+chrome.runtime.onStartup.addListener(() => {
+  chrome.storage.local.get(['quickCreate'], result => {
+    if (result.quickCreate === true) {
+      createMenus();
+    }
+  });
+});
+// handle extension installation
+chrome.runtime.onInstalled.addListener(() => {
+  chrome.storage.local.get(['quickCreate'], result => {
+    if (result.quickCreate === true) {
+      createMenus();
+    }
+  });
+});
+
+
+
+
+/* ADDS THE NOTIFICATION AND POPUP UPDATES */
+
 function fetchData() {
   fetch("https://imgflip.com/ajax_get_le_data", {
     method: "GET",
@@ -15,9 +80,15 @@ function fetchData() {
         chrome.action.setBadgeText({ text: notificationCount });
         chrome.action.setBadgeBackgroundColor({ color: "#D72E62" })
         console.log(`set notif count to ${notificationCount}`)
-        chrome.runtime.sendMessage({ type: "load_data", data: data });
+        try {
+          chrome.runtime.sendMessage({ type: "load_data", data: data });
+        } catch(error) {
+        }
       } else {
-        chrome.runtime.sendMessage({ type: "not_logged_in" });
+        try {
+          chrome.runtime.sendMessage({ type: "not_logged_in" });
+        } catch(error) {
+        }
       }
     })
     .catch(err => {
@@ -29,15 +100,26 @@ function fetchData() {
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message.type === "popup_opened") {
     console.log("popup opened received");
-    fetchData();
+    try {
+      fetchData();
+    } catch(error) {
+    }
   }
 });
 
-fetchData();
+// initial load run
+try {
+  fetchData();
+} catch(error) {
+}
 
-const intervalInMinutes = .33;
+const intervalInMinutes = 1;
 const intervalInMilliseconds = intervalInMinutes * 60 * 1000;
 
 setInterval(() => {
-  fetchData();
+  try {
+    // run every so often
+    fetchData();
+  } catch(error) {
+  }
 }, intervalInMilliseconds);
