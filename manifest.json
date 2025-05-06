@@ -4,11 +4,10 @@
   "version": "2.0.0",
   "manifest_version": 3,
   "permissions": [
-    "cookies", 
     "alarms", 
-    "notifications", 
     "activeTab", 
-    "scripting", 
+    "scripting",
+    "contextMenus",
     "storage"
   ],
   "host_permissions": [
