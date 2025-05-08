@@ -23,10 +23,7 @@
 
   "content_scripts": [
     {
-      "matches": [
-      "https://*.imgflip.com/*",
-      "http://*.imgflip.com/*"
-      ],
+      "matches": ["*://*.imgflip.com/*"],
       "js": ["scripts/break_ads.js", 
               "scripts/update-theme.js", 
               "scripts/flip-buttons.js",
