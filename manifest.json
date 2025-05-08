@@ -1,16 +1,17 @@
 {
   "name": "imgxtension",
   "description": "Extension for modifying the imgflip website for a better user experience.",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "manifest_version": 3,
   "permissions": [
-    "alarms", 
     "activeTab", 
-    "scripting",
+    "storage",
     "contextMenus",
-    "storage"
+    "tabs"
   ],
   "host_permissions": [
+    "http://*/*", 
+    "https://*/*",
     "http://*.imgflip.com/*", 
     "https://*.imgflip.com/*"
   ],
