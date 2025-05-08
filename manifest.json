@@ -10,8 +10,6 @@
     "tabs"
   ],
   "host_permissions": [
-    "http://*/*", 
-    "https://*/*",
     "http://*.imgflip.com/*", 
     "https://*.imgflip.com/*"
   ],
