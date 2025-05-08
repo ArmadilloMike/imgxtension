@@ -1,6 +1,16 @@
 /* ADDS IMGFLIP QUICK CREATE */
-let contextMenuListenerAdded = false;
+chrome.contextMenus.onClicked.addListener((info, tab) => {
+  if (info.menuItemId === 'imgflip-image') {
+    const url = 'https://imgflip.com/memegenerator#imgUrl=' + encodeURIComponent(info.srcUrl);
+    chrome.tabs.create({ url });
+  } else if (info.menuItemId === 'imgflip-video') {
+    const url = 'https://imgflip.com/gif-maker#videoUrl=' + encodeURIComponent(info.srcUrl);
+    chrome.tabs.create({ url });
+  }
+});
+
 function createMenus() {
+  console.log("Creating context menus");
   chrome.contextMenus.removeAll(() => {
     chrome.contextMenus.create({
       id: 'imgflip-image',
@@ -13,18 +23,6 @@ function createMenus() {
       contexts: ['video']
     });
   });
-  if (!contextMenuListenerAdded) {
-    chrome.contextMenus.onClicked.addListener((info, tab) => {
-      if (info.menuItemId === 'imgflip-image') {
-        const url = 'https://imgflip.com/memegenerator#imgUrl=' + encodeURIComponent(info.srcUrl);
-        chrome.tabs.create({ url });
-      } else if (info.menuItemId === 'imgflip-video') {
-        const url = 'https://imgflip.com/gif-maker#videoUrl=' + encodeURIComponent(info.srcUrl);
-        chrome.tabs.create({ url });
-      }
-    });
-    contextMenuListenerAdded = true;
-  }
 }
 
 function removeMenus() {
@@ -41,6 +39,7 @@ chrome.storage.onChanged.addListener((changes, area) => {
     }
   }
 });
+
 // handle startup
 chrome.runtime.onStartup.addListener(() => {
   chrome.storage.local.get(['quickCreate'], result => {
@@ -49,7 +48,8 @@ chrome.runtime.onStartup.addListener(() => {
     }
   });
 });
-// handle extension installation
+
+// handle installation
 chrome.runtime.onInstalled.addListener(() => {
   chrome.storage.local.get(['quickCreate'], result => {
     if (result.quickCreate === true) {
@@ -57,8 +57,6 @@ chrome.runtime.onInstalled.addListener(() => {
     }
   });
 });
-
-
 
 
 /* ADDS THE NOTIFICATION AND POPUP UPDATES */
