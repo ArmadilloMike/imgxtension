@@ -73,6 +73,7 @@
                   "fonts/silkscreen.ttf",
                   "fonts/mojangles.ttf",
                   "fonts/impact.ttf",
+                  "fonts/ubuntu.ttf",
 
                   "images/*"],
     "matches": ["*://*.imgflip.com/*"]
