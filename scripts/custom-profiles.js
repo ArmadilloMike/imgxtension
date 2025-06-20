@@ -63,6 +63,7 @@ chrome.storage.local.get(['customProfiles'], result => {
                         "silkscreen",
                         "mojangles",
                         "impact",
+                        "ubuntu",
                         ];
 
         let html
