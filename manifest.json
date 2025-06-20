@@ -60,7 +60,6 @@
                   "fonts/wingdings.ttf",
                   "fonts/audiowide.ttf",
                   "fonts/exo.ttf",
-                  "fonts/ubuntu.ttf",
                   "fonts/orbitron.ttf",
                   "fonts/permanent-marker.ttf",
                   "fonts/saira-stencil-one.ttf",
@@ -74,6 +73,7 @@
                   "fonts/silkscreen.ttf",
                   "fonts/mojangles.ttf",
                   "fonts/impact.ttf",
+                  "fonts/ubuntu.ttf",
 
                   "images/*"],
     "matches": ["*://*.imgflip.com/*"]
