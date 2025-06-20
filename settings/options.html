@@ -135,7 +135,7 @@
                 <div class="setting-drop" state="hidden" data-setting="useTheme">
                     <svg class="drop-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff" width="18" height="18"><path d="M0 0h24v24H0z" fill="none"/><path d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"/></svg>
                 </div>
-                <span class="setting-title">Use theme</span>
+                <span class="setting-title">Site Theme</span>
                 <div class="setting-topspacer"></div>
                 <div class="switch" state="off" data-setting="useTheme"></div>
             </div>
@@ -148,20 +148,21 @@
                 </p>
                 <!--theme btn selectors-->
                 <div id="theme-btns" class="btn-container">
-                    <div class="theme-btn" data-theme="0" title="Default Imgflip">
-                        <img src="../themes/theme-icons/default.svg">
-                    </div>
-                    <div class="theme-btn" data-theme="1" title="Default Purple">
+                    
+                    <div class="theme-btn" data-theme="0" title="Purple">
                         <img src="../themes/theme-icons/msmg-purple.svg">
                     </div>
-                    <div class="theme-btn" data-theme="2" title="Dark Purple">
+                    <div class="theme-btn" data-theme="1" title="Dark Purple">
                         <img src="../themes/theme-icons/dark-purple.svg">
                     </div>
-                    <div class="theme-btn" data-theme="3" title="Orange!">
-                        <img src="../themes/theme-icons/dark-purple.svg">
+                    <div class="theme-btn" data-theme="2" title="Orange!">
+                        <img src="../themes/theme-icons/orange.png">
+                    </div>
+                    <div class="theme-btn" data-theme="3" title="Sky Blue">
+                        <img src="../themes/theme-icons/sky.png">
                     </div>
                 </div>
-                <!--font previes display-->
+                <!--theme previews display-->
                 <div class="preview-container">
                     <div class="preview-shift"></div>
                     <div class="preview-spacer"></div>
@@ -176,6 +177,92 @@
                     <div class="preview-box" data-preview="6"></div>
                     <div class="preview-box" data-preview="7"></div>
                     <div class="preview-box" data-preview="8" style="border-right: 1px solid var(--border-color-o)"></div>
+                </div>
+                <p style="font-size: 13px;">
+                    Credits: <span><a href="https://imgflip.com/user/32-Bit">32-Bit</a>  <a href="https://imgflip.com/user/the_meme_rag">Meme Rag (Art)</a></span>
+                </p>
+            </div>
+        </div>
+
+        <!--font setting-->
+        <div class="setting-body" id="useFont">
+            <div class="setting-topbar">
+                <div class="setting-drop" state="hidden" data-setting="useFont">
+                    <svg class="drop-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff" width="18" height="18"><path d="M0 0h24v24H0z" fill="none"/><path d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"/></svg>
+                </div>
+                <span class="setting-title">Site Font</span><span class="new">New</span>
+                <div class="setting-topspacer"></div>
+                <div class="switch" state="off" data-setting="useFont"></div>
+            </div>
+            <div class="setting-desc" style="display: none;">
+                <p>
+                    Use different fonts on the website. Replaces all text with the selected font. Users can put {font:"fontname"} with any available font to load that on for their profile specifically. "fontname" should be all lowercase with hyphens where spaces would be.
+                </p>
+                <p>
+                    Fonts:
+                </p>
+                <!--font btn selectors-->
+                <div id="font-btns" class="btn-container">
+                    <div class="font-btn" data-font="0" title="Papyrus">
+                        <img style="width: 20px;" src="../fonts/font-icons/msmg-purple.svg">
+                    </div>
+                    <div class="font-btn" data-font="1" title="Comic Sans MS">
+                        <img style="width: 20px;" src="../fonts/font-icons/msmg-purple.svg">
+                    </div>
+                    <div class="font-btn" data-font="2" title="Times New Roman">
+                        <img style="width: 20px;" src="../fonts/font-icons/msmg-purple.svg">
+                    </div>
+                    <div class="font-btn" data-font="3" title="Chalkduster">
+                        <img style="width: 20px;" src="../fonts/font-icons/msmg-purple.svg">
+                    </div>
+                    <div class="font-btn" data-font="4" title="Wingdings">
+                        <img style="width: 20px;" src="../fonts/font-icons/msmg-purple.svg">
+                    </div>
+                    <div class="font-btn" data-font="5" title="Audiowide">
+                        <img style="width: 20px;" src="../fonts/font-icons/msmg-purple.svg">
+                    </div>
+                    <div class="font-btn" data-font="6" title="Exo">
+                        <img style="width: 20px;" src="../fonts/font-icons/msmg-purple.svg">
+                    </div>
+                    <div class="font-btn" data-font="7" title="Orbitron">
+                        <img style="width: 20px;" src="../fonts/font-icons/msmg-purple.svg">
+                    </div>
+                    <div class="font-btn" data-font="8" title="Permanent Marker">
+                        <img style="width: 20px;" src="../fonts/font-icons/msmg-purple.svg">
+                    </div>
+                    <div class="font-btn" data-font="9" title="Saira Stencil One">
+                        <img style="width: 20px;" src="../fonts/font-icons/msmg-purple.svg">
+                    </div>
+                    <div class="font-btn" data-font="10" title="Tektur">
+                        <img style="width: 20px;" src="../fonts/font-icons/msmg-purple.svg">
+                    </div>
+                    <div class="font-btn" data-font="11" title="Pricedown">
+                        <img style="width: 20px;" src="../fonts/font-icons/msmg-purple.svg">
+                    </div>
+                    <div class="font-btn" data-font="12" title="Love ya like a sister">
+                        <img style="width: 20px;" src="../fonts/font-icons/msmg-purple.svg">
+                    </div>
+                    <div class="font-btn" data-font="13" title="Andy">
+                        <img style="width: 20px;" src="../fonts/font-icons/msmg-purple.svg">
+                    </div>
+                    <div class="font-btn" data-font="14" title="VCR OCD">
+                        <img style="width: 20px;" src="../fonts/font-icons/msmg-purple.svg">
+                    </div>
+                    <div class="font-btn" data-font="15" title="COPPERPLATE">
+                        <img style="width: 20px;" src="../fonts/font-icons/msmg-purple.svg">
+                    </div>
+                    <div class="font-btn" data-font="16" title="Pacifico">
+                        <img style="width: 20px;" src="../fonts/font-icons/msmg-purple.svg">
+                    </div>
+                    <div class="font-btn" data-font="17" title="Silkscreen">
+                        <img style="width: 20px;" src="../fonts/font-icons/msmg-purple.svg">
+                    </div>
+                    <div class="font-btn" data-font="18" title="Mojangles">
+                        <img style="width: 20px;" src="../fonts/font-icons/msmg-purple.svg">
+                    </div>
+                    <div class="font-btn" data-font="19" title="Impact">
+                        <img style="width: 20px;" src="../fonts/font-icons/msmg-purple.svg">
+                    </div>
                 </div>
                 <p style="font-size: 13px;">
                     Credits: <span><a href="https://imgflip.com/user/32-Bit">32-Bit</a>  <a href="https://imgflip.com/user/the_meme_rag">Meme Rag (Art)</a></span>
@@ -216,6 +303,30 @@
             <div class="setting-desc" style="display: none;">
                 <p>
                     Adds the same feature as the official Imgflip "Quick Create" extension. Right click an image to have the option to be taken to imgflip with it loaded as an uploaded meme. No need to download anything.
+                </p>
+                <p style="font-size: 13px;">
+                    Credits: <span><a href="https://imgflip.com/user/32-Bit">32-Bit</a></span>
+                </p>
+            </div>
+        </div>
+
+        <!--custom profile setting-->
+        <div class="setting-body" id="customProfiles">
+            <div class="setting-topbar">
+                <div class="setting-drop" state="hidden" data-setting="customProfiles">
+                    <svg class="drop-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff" width="18" height="18"><path d="M0 0h24v24H0z" fill="none"/><path d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"/></svg>
+                </div>
+                <span class="setting-title">Custom Profiles</span><span class="new">New</span>
+                <div class="setting-topspacer"></div>
+                <div class="switch" state="off" data-setting="customProfiles"></div>
+            </div>
+            <div class="setting-desc" style="display: none;">
+                <p>
+                    Lets users edit their profiles by adding content to their tagline.<br>
+                    To edit your profile, add to your tagline with the following options, examples provided:<br>
+                    <span style="color:var(--impcolor-blu-o)">{font:"comic-sans", color:"#ffffff", pfp:"9geor3"}</span><br>
+                    Do not include options you don't want to use, e.g. if you only want to add a font then just put {font:"font-name"}.<br>
+                    Avaialable fonts are the ones listed under the "Site Fonts" feature. All fonts must be in lowercase and use "-" instead of spaces.
                 </p>
                 <p style="font-size: 13px;">
                     Credits: <span><a href="https://imgflip.com/user/32-Bit">32-Bit</a></span>
