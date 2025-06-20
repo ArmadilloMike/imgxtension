@@ -5,9 +5,7 @@
   "manifest_version": 3,
   "permissions": [
     "storage",
-    "contextMenus",
-    "tabs",
-    "alarms"
+    "contextMenus"
   ],
   "host_permissions": [
     "http://*.imgflip.com/*", 
