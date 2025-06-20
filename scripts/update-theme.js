@@ -7,10 +7,11 @@ chrome.storage.local.get(['useTheme'], result => {
         chrome.storage.local.get(['theme'], result => {
             const theme = result.theme ?? 0;
 
-            const themes = ["default",
+            const themes = [
                             "msmg-purple",
                             "dark-purple",
                             "orange",
+                            "sky",
                             ];
 
             // Dynamically inject the CSS
