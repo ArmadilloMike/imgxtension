@@ -87,6 +87,32 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
+
+    // Add click event to all font btns
+    document.querySelectorAll('.font-btn').forEach(switchEl => {
+      switchEl.addEventListener('click', () => {
+        const key = switchEl.dataset.font;
+        // Save to storage
+        chrome.storage.local.set({ font: key }, () => {
+          console.log(`Setting "font" set to ${key}`);
+        });
+
+      // Loop through all font buttons
+        document.querySelectorAll('.font-btn').forEach(btn => {
+          btn.style.borderColor = "var(--subcolor-o)";  // Reset others
+        });
+        switchEl.style.borderColor = "var(--impcolor-blu-o)";
+      });
+    });
+
+    //initial highlight
+    chrome.storage.local.get(['font'], result => {
+      const font = result.font ?? 0;
+      const highlight = document.querySelector(`[data-font="${font}"]`);
+      highlight.style.borderColor = 'var(--impcolor-blu-o)';
+    });
+
+
     // Add click event to all dropdowns
    document.querySelectorAll('.setting-drop').forEach(dropBtn => {
     dropBtn.addEventListener('click', () => {
@@ -113,10 +139,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   
   function setThemePreview(theme) {
-    const themes = ["default",
+    const themes = [
       "msmg-purple",
       "dark-purple",
       "orange",
+      "sky",
       ];
     const vars = ["--maincolor",
       "--subcolor",

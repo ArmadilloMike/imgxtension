@@ -120,6 +120,7 @@ body {
     width: 100%;
     background: none;
     border: none;
+    flex-wrap: wrap;
 }
 .theme-btn{
     width: 20px;
@@ -129,6 +130,15 @@ body {
 .theme-btn:hover {
     cursor: pointer;
 }
+.font-btn{
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--subcolor-o);
+}
+.font-btn:hover {
+    cursor: pointer;
+}
+
 .preview-container {
     display: flex;
     flex-wrap: nowrap;
@@ -160,4 +170,12 @@ body {
 
 img {
     width: 100%;
+}
+
+.new {
+    background: var(--impcolor-blu-o);
+    color: var(--fontcolor-o);
+    border-radius: 5px;
+    margin: 0px 0px 0px 6px;
+    padding: 1px 3px 1px 3px;
 }

@@ -1,7 +1,7 @@
 {
   "name": "imgxtension",
   "description": "Extension for modifying the imgflip website for a better user experience.",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "manifest_version": 3,
   "permissions": [
     "storage",
@@ -34,6 +34,8 @@
               "scripts/msmg-link.js",
               "scripts/show-mod.js",
               "scripts/notifContent.js",
+              "scripts/font-select.js",
+              "scripts/custom-profiles.js",
               
               "settings/options.js"
             ],
@@ -48,10 +50,31 @@
                   "scripts/top-posts.css",
                   "settings/options.css",
 
-                  "themes/default.css",
                   "themes/msmg-purple.css",
                   "themes/dark-purple.css",
                   "themes/orange.css",
+                  "themes/sky.css",
+
+                  "fonts/papyrus.ttf",
+                  "fonts/comic-sans.ttf",
+                  "fonts/times-new-roman.ttf",
+                  "fonts/chalkduster.ttf",
+                  "fonts/wingdings.ttf",
+                  "fonts/audiowide.ttf",
+                  "fonts/exo.ttf",
+                  "fonts/orbitron.ttf",
+                  "fonts/permanent-marker.ttf",
+                  "fonts/saira-stencil-one.ttf",
+                  "fonts/tektur.ttf",
+                  "fonts/pricedown.ttf",
+                  "fonts/love-ya-like-a-sister.ttf",
+                  "fonts/andy.ttf",
+                  "fonts/vcr-ocd.ttf",
+                  "fonts/copperplate.ttf",
+                  "fonts/pacifico.ttf",
+                  "fonts/silkscreen.ttf",
+                  "fonts/mojangles.ttf",
+                  "fonts/impact.ttf",
 
                   "images/*"],
     "matches": ["*://*.imgflip.com/*"]

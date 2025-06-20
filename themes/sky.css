@@ -1,8 +1,8 @@
 :root {
-    --titleshift: 50deg; /* determines the logo color shift */
-    --maincolor: #2c3b3a;
-    --subcolor: #648b89;
-    --border-color: #9cdbd9;
+    --titleshift: 190deg; /* determines the logo color shift */
+    --maincolor: #5ea8ee;
+    --subcolor: #46548c;
+    --border-color: #9cbcdb;
     --fontcolor: #f7f7f7;
 
     --border-thicc: 1px;
@@ -12,6 +12,6 @@
     --impcolor-red: #5382f7;
 
     --customco-1: #f7f7f7;
-    --customco-2: #ff005c;
-    --customco-3: #e95732;
+    --customco-2: #7780d3;
+    --customco-3: #32e9ac;
 }

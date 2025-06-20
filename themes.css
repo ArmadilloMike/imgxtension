@@ -28,7 +28,7 @@ body, body.darkmode, .user-stat, .user-stats, .home-create-btns, .base-options, 
 }
 
 
-textarea, button:not(.check-red, .ico-color-btn, .c-reply, .c-flag, .c-delete, .c-img-link), #done, .nt-not, .ibox, .clearfix, .login-box, .c-right, .i-select-dropdown, .user-com, .shr-popup, .BOX, .menu, .pager-next-l-but, .home-img, .recaption.l.but, #chat-main, #chat-list, #user-tagline, #base-left, #panel-back, #footer {
+textarea, div:not(.ico, .ico-pixel, .com, .user-stats, .user-stat, .drag-box, .base-options, .stream-description, .c-new-btn-wrap, .img-coms-header, .img-coms, .c-new-text), button:not(.check-red, .ico-color-btn, .c-reply, .c-flag, .c-delete, .c-img-link), #done, .nt-not, .ibox, .clearfix, .login-box, .c-right, .i-select-dropdown, .user-com, .shr-popup, .BOX, .menu, .pager-next-l-but, .home-img, .recaption.l.but, #chat-main, #chat-list, #base-left, #panel-back, #footer {
     background: var(--subcolor) !important;
     color: var(--fontcolor) !important;
 }
@@ -72,9 +72,6 @@ textarea, button:not(.check-red, .ico-color-btn, .c-reply, .c-flag, .c-delete, .
     border: var(--border-thicc) solid var(--impcolor-blue) !important;
 }
 
-.u-username {
-    color: var(--fontcolor) !important;
-}
 .c-img-owner {
     color: var(--impcolor-blu) !important;
 }

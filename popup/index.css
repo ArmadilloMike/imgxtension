@@ -3,15 +3,17 @@
 }
 
 body {
+    margin: 0px;
     background-color: #111;
     min-width: 400px;
 }
 h1 {
     color: #ccc;
     text-align: center;
-    border: 1px solid #666;
+    border-bottom: 1px solid #666;
     padding: 10px;
-    background: #333;   
+    background: #333;
+    width: 100%;  
 }
 button {
     display: flex;
@@ -41,12 +43,12 @@ button:hover {
 
 
 .user-title {
-    margin-top: 3px;
+    margin: 6px;
     display: flex;
     background: #333;
     color: #ccc;
     font-size: 18px;    
-    border: 2px solid #666;
+    border: 1px solid #666;
     padding: 10px;
     text-align: center;
 }
