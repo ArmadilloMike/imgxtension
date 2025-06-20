@@ -29,6 +29,7 @@ chrome.storage.local.get(['useFont'], result => {
                         "silkscreen",
                         "mojangles",
                         "impact",
+                        "ubuntu",
                         ];
 
         let html
