@@ -74,6 +74,7 @@
                   "fonts/mojangles.ttf",
                   "fonts/impact.ttf",
                   "fonts/ubuntu.ttf",
+                  "fonts/slackey.ttf",
 
                   "images/*"],
     "matches": ["*://*.imgflip.com/*"]
