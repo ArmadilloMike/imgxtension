@@ -125,7 +125,8 @@ chrome.storage.local.get(['customProfiles'], result => {
                     />
                     `;
             // generate html
-            const ico = document.querySelectorAll('.ico')[0];
+            let ico = document.querySelector('#user-title');
+            ico = ico.querySelector('.ico');
             ico.innerHTML = html;
 
         }
