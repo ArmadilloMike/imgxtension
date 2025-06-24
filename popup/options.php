@@ -14,6 +14,7 @@
       
       let box = document.querySelector('.user-title')
       const html = `<br><p>version: ${manifestVersion}</p>`;
+      box.append(html);
     </script>
   </body>
 </html>
