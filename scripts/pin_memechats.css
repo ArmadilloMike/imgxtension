@@ -1,0 +1,29 @@
+.fav-container {
+    float: left;
+    display: flex;
+    flex-wrap: wrap;
+    width: 10%;
+}
+
+.fav-btn {
+    float: left;
+    padding: 10px 0px;
+    height: 50.9px;
+    width: 100%;
+    border-bottom: 1px solid #666;
+}
+
+.chat {
+    width: 80%;
+    float: right;
+}
+
+.fav-star {
+    fill: none;
+    stroke: #666;
+}
+
+.fav-star.set {
+    fill: #00bff3;
+    stroke: #00bff3;
+}

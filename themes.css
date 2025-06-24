@@ -150,3 +150,11 @@ textarea, div:not(.ico, .ico-pixel, .color-box, .com, .user-stats, .user-stat, .
 #footer-nav a {
     color: var(--border-color) !important;
 }
+
+.fav-star {
+    stroke: var(--subcolor);
+}
+.fav-star.set {
+    stroke: var(--impcolor-blu) !important;
+    fill: var(--impcolor-blu) !important;
+}

@@ -34,6 +34,8 @@
               "scripts/notifContent.js",
               "scripts/font-select.js",
               "scripts/custom-profiles.js",
+              "scripts/pin_memechats.js",
+              "scripts/sex.js",
               
               "settings/options.js"
             ],
@@ -46,6 +48,8 @@
     "resources": ["themes.css",
                   "scripts/flip-buttons.css",
                   "scripts/top-posts.css",
+                  "scripts/pin_memechats.css",
+
                   "settings/options.css",
 
                   "themes/msmg-purple.css",
