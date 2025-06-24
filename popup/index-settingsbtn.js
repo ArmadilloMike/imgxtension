@@ -49,3 +49,12 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log("popup message");
   chrome.runtime.sendMessage({ type: "popup_opened" });
 });
+
+
+// load info in popup
+const manifest = chrome.runtime.getManifest();
+const manifestVersion = manifest.version;
+
+let box = document.querySelector('body')
+const html = `<br><div><p style="color:#fff; padding:5px;">version: ${manifestVersion}</p></div>`;
+box.innerHTML += html;
