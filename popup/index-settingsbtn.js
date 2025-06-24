@@ -1,6 +1,8 @@
-document.getElementById("settingsBtn").addEventListener("click", function() {
-    chrome.runtime.openOptionsPage();  // Opens the options page
-  });
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("settingsBtn").addEventListener("click", function() {
+      chrome.runtime.openOptionsPage();  // Opens the options page
+    });
+});
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message.type === "not_logged_in") {
