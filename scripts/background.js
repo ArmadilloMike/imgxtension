@@ -1,3 +1,17 @@
+/* preloads pinchats */
+chrome.runtime.onInstalled.addListener(() => {
+    chrome.storage.local.get(['pinChat', 'pinChats'], (result) => {
+        if (result.pinChat === undefined) {
+            chrome.storage.local.set({ pinChat: false });
+        }
+        if (!Array.isArray(result.pinChats)) {
+            chrome.storage.local.set({ pinChats: [] });
+        }
+    });
+});
+
+
+
 /* ADDS IMGFLIP QUICK CREATE */
 chrome.contextMenus.onClicked.addListener((info, tab) => {
   if (info.menuItemId === 'imgflip-image') {
