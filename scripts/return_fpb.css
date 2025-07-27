@@ -1,0 +1,104 @@
+
+home-create-btn .make-icon-pie circle:first-child {
+    fill: #00bff3
+}
+
+.home-create-btn .make-icon-pie circle:last-child {
+    stroke: #fff
+}
+
+.darkmode .home-create-btn .make-icon-pie circle:last-child {
+    stroke: #333
+}
+
+
+.make-icon-pie circle:first-child {
+	fill: #999;
+	stroke: none;
+}
+.make-icon {
+    float: left;
+    width: 30px;
+    height: 30px;
+}
+
+.make-item:hover .make-icon-demo,.make-icon-demo.on {
+    background: #000
+}
+.make-item:hover .make-icon-demo-inner,.make-icon-demo.on .make-icon-demo-inner {
+    background: #f80
+}
+
+
+.make-item .make-icon-resize, .make-icon-resize.on {
+    stroke: #999
+}
+.make-item:hover .make-icon-resize, .make-icon-resize.on {
+    stroke: #00bff3
+}
+
+.make-icon-resize {
+    fill: none;
+    stroke: #00bff3;
+    stroke-width: 10
+}
+
+
+.home-create-btn .make-icon-demo {
+    background: #00bff3
+}
+
+.make-icon-demo {
+    background: #666;
+    position: relative
+}
+
+.home-create-btn .make-icon-demo-inner {
+    background: #fff
+}
+
+.darkmode .home-create-btn .make-icon-demo-inner {
+    background: #333
+}
+/*
+.home-create-btn .make-icon-demo,.home-create-btn .make-icon-pie,.home-create-btn .make-icon-resize {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 5px
+}
+*/
+.make-icon-demo-inner {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 60%;
+    background: #999
+}
+
+.home-create-btn svg,.home-create-btn img,.home-create-btn .make-icon-demo {
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 10px
+}
+
+@media(max-width: 800px) {
+    .home-create-btns {
+        flex-wrap:wrap
+    }
+
+    .home-create-btn {
+        width: calc(33.33% - 10px)
+    }
+
+    .home-create-btn .make-icon-demo,.home-create-btn .make-icon-pie,.home-create-btn .make-icon-resize {
+        width: 30px;
+        height: 30px;
+        margin-bottom: 5px;
+    }
+
+    .home-create-btn:nth-child(4),.home-create-btn:nth-child(5),.home-create-btn:nth-child(6) {
+        font-size: .9em
+    }
+}

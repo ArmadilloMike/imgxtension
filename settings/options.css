@@ -16,6 +16,8 @@
     color: var(--fontcolor-o);
 }
 
+
+
 body {
     margin: 0px;
     background: var(--maincolor-o);
@@ -178,4 +180,16 @@ img {
     border-radius: 5px;
     margin: 0px 0px 0px 6px;
     padding: 1px 3px 1px 3px;
+}
+
+
+.update-box {
+    font-size: 15px;
+    background: var(--subcolor-o);
+    padding: 3px;
+    border: 1px solid var(--border-color-o);
+}
+
+h3 {
+    margin: 0px;
 }

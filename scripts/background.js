@@ -1,3 +1,24 @@
+/* check for updates */
+chrome.runtime.onInstalled.addListener((details) => {
+  if (details.reason === 'update') {
+    const currentVersion = chrome.runtime.getManifest().version;
+    chrome.storage.local.get('lastVersion', (data) => {
+      if (data.lastVersion !== currentVersion) {
+        chrome.storage.local.set({ lastVersion: currentVersion });
+
+        // Open a tab showing update info
+        chrome.tabs.create({ url: 'settings/update.html' });
+      }
+    });
+  } else if (details.reason === 'install') {
+    // Set initial version on first install
+    const currentVersion = chrome.runtime.getManifest().version;
+    chrome.storage.local.set({ lastVersion: currentVersion });
+  }
+});
+
+
+
 /* preloads pinchats */
 chrome.runtime.onInstalled.addListener(() => {
     chrome.storage.local.get(['pinChat', 'pinChats'], (result) => {
