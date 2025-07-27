@@ -1,7 +1,7 @@
 {
   "name": "imgxtension",
   "description": "Extension for modifying the imgflip website for a better user experience.",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "manifest_version": 3,
   "permissions": [
     "storage",
