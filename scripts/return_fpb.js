@@ -60,11 +60,11 @@ chrome.storage.local.get(['frontPageBtns'], result => {
                         Make a Chart
                         </a>
 
-                        <a class="make-item" https://imgflip.com/image-resizer title="Resizer">
+                        <a class="make-item" href="https://imgflip.com/image-resizer" title="Resizer">
                         <svg class="make-icon make-icon-resize" viewBox="0 0 100 100">
                         <path d="M20 40l0 -20l20 0M60 20l20 0l0 20M80 60l0 20l-20 0M40 80l-20 0l0 -20"></path>
                         </svg>
-                        Make a Chart
+                        Resize an Image
                         </a>
 
                         <a class="make-item" href="https://imgflip.com/demotivational-maker" title="Demotivational Poster Maker">
