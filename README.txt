@@ -1,5 +1,5 @@
 <a href="https://chromewebstore.google.com/detail/imgxtension/cknjefajnedieficemhbonakbpjmiphc?authuser=0&hl=en">
-    <img src="/CreeperKing77/imgxtension/git_assets/images/cws-badge.png" alt="Chrome Web Store" style="max-width: 100%;">
+    <img src="https://raw.githubusercontent.com/CreeperKing77/imgxtension/git_assets/images/cws-badge.png" alt="Chrome Web Store" style="max-width: 100%;">
 </a>
 
 I have only so far tested this on Brave and Chrome, it should run on most Chromium based browsers. First, download the project into one folder, then go to 
