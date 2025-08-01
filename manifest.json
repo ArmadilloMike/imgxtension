@@ -2,23 +2,20 @@
   "name": "imgxtension",
   "description": "Extension for modifying the imgflip website for a better user experience.",
   "version": "2.3.2",
-  "manifest_version": 3,
+  "manifest_version": 2,
   "permissions": [
     "storage",
-    "contextMenus"
-  ],
-  "host_permissions": [
+    "contextMenus",
     "http://*.imgflip.com/*", 
     "https://*.imgflip.com/*"
   ],
 
-  "action": {
+
+  "browser_action": {
     "default_popup": "popup/index.html",
     "default_icon": "imgicon.png"
   },
-  "background": {
-    "service_worker": "scripts/background.js"
-  },
+ "background": { "scripts": ["scripts/background.js"] },
 
   "content_scripts": [
     {
@@ -37,6 +34,7 @@
               "scripts/pin_memechats.js",
               "scripts/sex.js",
               "scripts/return_fpb.js",
+              "scripts/settings-btn.js",
               
               "settings/options.js"
             ],
@@ -45,8 +43,7 @@
   ],
 
   "web_accessible_resources": [
-  {
-    "resources": ["themes.css",
+ "themes.css",
                   "scripts/flip-buttons.css",
                   "scripts/top-posts.css",
                   "scripts/pin_memechats.css",
@@ -80,11 +77,9 @@
                   "fonts/mojangles.ttf",
                   "fonts/impact.ttf",
                   "fonts/ubuntu.ttf",
-                  "fonts/slackey.ttf",
+                  "fonts/slackey.ttf"
 
-                  "images/*"],
-    "matches": ["*://*.imgflip.com/*"]
-  }
+
 ],
 "options_page": "settings/options.html"
 
