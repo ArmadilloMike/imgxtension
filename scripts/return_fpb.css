@@ -34,7 +34,7 @@ home-create-btn .make-icon-pie circle:first-child {
     stroke: #999
 }
 .make-item:hover .make-icon-resize, .make-icon-resize.on {
-    stroke: #00bff3
+    stroke: #00bff3 !important
 }
 
 .make-icon-resize {
@@ -45,7 +45,7 @@ home-create-btn .make-icon-pie circle:first-child {
 
 
 .home-create-btn .make-icon-demo {
-    background: #00bff3
+    background: #00bff3 !important
 }
 
 .make-icon-demo {
