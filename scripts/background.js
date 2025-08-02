@@ -17,6 +17,25 @@ chrome.runtime.onInstalled.addListener((details) => {
   }
 });
 
+/* settings button on settings page */
+// For MV3 Chrome and MV2 Firefox
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  if (message.action === "openOptions") {
+    if (chrome.runtime.openOptionsPage) {/*
+      chrome.runtime.openOptionsPage(() => {
+        if (chrome.runtime.lastError) {
+          // Fallback if openOptionsPage is not supported or errors out
+          chrome.tabs.update(sender.tab.id, { url: chrome.runtime.getURL("settings/options.html") });
+        }
+      });*/
+    /*} else {*/
+      // Older browsers or fallback
+      chrome.tabs.update(sender.tab.id, { url: chrome.runtime.getURL("settings/options.html") });
+    }
+  }
+});
+
+
 
 
 /* preloads pinchats */
@@ -110,9 +129,9 @@ function fetchData() {
       const notificationCount = data.user && data.user.nots !== undefined ? String(data.user.nots) : "";
       if (data.user.id !== 0) {
         //set badge to notifs
-        chrome.action.setBadgeText({ text: notificationCount });
-        chrome.action.setBadgeBackgroundColor({ color: "#D72E62" })
-        console.log(`set notif count to ${notificationCount}`)
+        chrome.browserAction.setBadgeText({ text: notificationCount });
+        chrome.browserAction.setBadgeBackgroundColor({ color: "#D72E62" });
+        console.log(`set notif count to ${notificationCount}`);
         try {
           chrome.runtime.sendMessage({ type: "load_data", data: data });
         } catch(error) {
