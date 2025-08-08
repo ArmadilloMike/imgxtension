@@ -1,4 +1,4 @@
-Install in one click on Chrome or Firefox:
+Install in one click on Chrome or Firefox:<br>
 <a href="https://chromewebstore.google.com/detail/imgxtension/cknjefajnedieficemhbonakbpjmiphc?authuser=0&hl=en">
     <img src="https://raw.githubusercontent.com/CreeperKing77/imgxtension//main/git_assets/images/cws-badge.png" alt="Chrome Web Store" style="max-width: 100%;">
 </a>
@@ -31,4 +31,5 @@ chrome.storage.local.get(['(your setting id)'], result => {
     if (window.location.href.indexOf("(url)") > -1 && setting == true) {
 
 This ensures it only operates when turned on and on pages it should. if it only is necessary on certain pages, replace (url) with the imgflip.com/(page), otherwise just use imgflip.com.
+
 
