@@ -5,8 +5,8 @@ Install in one click on Chrome or Firefox:<br>
 <a href="https://addons.mozilla.org/en-US/firefox/addon/imgxtension/">
     <img src="https://raw.githubusercontent.com/CreeperKing77/imgxtension//main/git_assets/images/ff-addon-badge.png" alt="Chrome Web Store" style="max-width: 100%;">
 </a>
-
-
+These linked versions work for all currently tested Chromium-based browsers for PC, including but not limited to Google Chrome, Chromium, Brave, and Microsoft Edge. Please raise an issue if you find issues on a given browser. It has also been tested for Firefox and Firefox Nightly (pc and android).
+ 
 I have only so far tested this on Brave and Chrome, it should run on most Chromium based browsers. First, download the project into one folder, then go to 
 chrome://extensions/
 
@@ -31,5 +31,6 @@ chrome.storage.local.get(['(your setting id)'], result => {
     if (window.location.href.indexOf("(url)") > -1 && setting == true) {
 
 This ensures it only operates when turned on and on pages it should. if it only is necessary on certain pages, replace (url) with the imgflip.com/(page), otherwise just use imgflip.com.
+
 
 
